@@ -3,7 +3,7 @@
 	{
 		if (strlen($tempName) > 0 & strlen($tempName) < 65)
 		{
-			if (!preg_match('/[^A-Za-z-]/', $tempName))
+			if (!preg_match('/[^A-Z a-z-]/', $tempName))
 				return True;
 		}
 		return False;

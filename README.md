@@ -7,9 +7,13 @@ This is mainly being developed by CougarCS for CougarCS. The purpose of this scr
 Change Log:
 ==========
 V1.1:
+
 	-Errors will no longer show up when first loading the page
+
 	-Consistent styles for errors
+
 	-Validates emails correctly
+
 	-Now uses stylesheets properly
 
 Below is the command for creating the table for the database:

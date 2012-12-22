@@ -4,7 +4,10 @@
 		<title>UH Member Validation</title>
 	</head>
 	<body onload='setInputFocus()'>
-		<form action='add_member.php' method='POST'>
+	<div id='logo'><img width='75%' src='http://kernelmeltdown.org/images/CSLogoBigForRed_small.png'/></div>
+	<div id='links'><a href='add_member.php'>Add Member</a> | <a href='validate_member.php'>Validate Member</a></div>
+	<div id='main'>	
+	<form action='add_member.php' method='POST'>
 			<b>Full Name:<b/><br/>
 			<input type='text' id='name' name='name'><br/>
 			<b>Email:</b><br/>
@@ -14,9 +17,8 @@
 			<input type='hidden' id='submitted' name='submitted' value='1'>
 			<input type='submit' value='Submit'><br/>
 		</form>
-	</body>
-</html>
-
+	</div>
+	<div id='status'>
 <?php
 	include("config.php");
 	include("validator.functions.php");
@@ -46,6 +48,8 @@
 	if (!mysql_query($query))
 		exit("MySQL Query Error");
 	else
-		echo "<b>$name</b> (<i>$id_number</i>) has been added.";
+		echo "<div id='good'><b>$name</b> (<i>$id_number</i>) has been added.</div>";
 ?>
-
+</div>
+</body>
+</html>

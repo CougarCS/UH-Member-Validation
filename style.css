@@ -1,9 +1,37 @@
 body{
-	background-color: grey;
+	background-color: #333333;
 	text-align: center;
+}
+
+#logo{
+	background-color: #333333;
+	width: 50%;
+	margin: auto auto;
+}
+
+#links{
+	background-color: #CCCCCC;
+	width: 50%;
+	margin: auto auto;
+}
+
+#main{
+	background-color: #999967;
+	width: 50%;
+	margin: auto auto;
+}
+
+#status{
+	background-color: #FFAAAA;
+	width: 50%;
+	margin: auto auto;
 }
 
 #error{
 	color: red;
 	text-decoration: bold;
+}
+
+#good{
+	background-color: #00AA00;
 }

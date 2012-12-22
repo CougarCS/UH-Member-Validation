@@ -10,15 +10,17 @@
 		</script>
 	</head>
 	<body onload='setInputFocus()'>
+	<div id='logo'><img width='75%' src='http://kernelmeltdown.org/images/CSLogoBigForRed_small.png'/></div>
+	<div id='links'><a href='add_member.php'>Add Member</a> | <a href='validate_member.php'>Validate Member</a></div>
+	<div id='main'>
 		<form action='validate_member.php' method='POST'>
 			<b>UH ID Number:</b><br/>
 			<input type='text' id='id_number' name='id_number'><br/>
 			<input type='hidden' id='submitted' name='submitted' value='1'>
 			<input type='submit' value='Submit'><br/>
 		</form>
-	</body>
-</html>
-
+	</div>
+	<div id='status'>
 <?php
 	include("config.php");
 	include("validator.functions.php");
@@ -36,6 +38,8 @@
 	$data = mysql_fetch_array(mysql_query("SELECT * FROM members WHERE id_number='$id_number'"));
 	if (!$data)
 		exit("<span id='error'>ID Not Found</span>");
-	echo "$data[name]<br/>$data[email]<br/>$data[id_number]<br/>$data[points]<br/>";
+	echo "<div id='good'><b>Name: </b>$data[name]<br/><b>Email: </b>$data[email]<br/><b>UH ID: </b>$data[id_number]<br/><b>Points: </b>$data[points]<br/></div>";
 ?>
-
+</div>
+</body>
+</html>

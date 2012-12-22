@@ -6,7 +6,12 @@ This is mainly being developed by CougarCS for CougarCS. The purpose of this scr
 
 Change Log:
 ==========
+V1.2
+
+	Added proper Name validation
+
 V1.1:
+
 	Style and HTML changes
 
 V1.0:

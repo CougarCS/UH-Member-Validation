@@ -1,5 +1,5 @@
 <?php
-	$VERSION = "1.1";
+	$VERSION = "1.2";
 
 	$DB_HOST = "localhost";
 	$DB_PORT = "3306";

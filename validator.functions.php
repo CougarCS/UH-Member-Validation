@@ -24,8 +24,18 @@
 		if (strlen($tempID_Number) == 7)
 		{
 			if (is_numeric($tempID_Number))
-				return True;
+				return 1;
 		}
-		return False;
+		else if (strlen($tempID_Number) == 30)
+				return 2;
+		else	
+			return 0;
+	}
+	
+	function convertNumber($tempID_Number)
+	{
+		$tempID_Number = "{$tempID_Number[3]}{$tempID_Number[4]}{$tempID_Number[5]}{$tempID_Number[6]}{$tempID_Number[7]}{$tempID_Number[8]}{$tempID_Number[9]}";
+		return $tempID_Number;
 	}
 ?>
+

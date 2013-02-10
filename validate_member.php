@@ -33,9 +33,12 @@
 
 	if (!$submitted)
 		exit;
-	if (!validateNumber($id_number))
+	else if (validateNumber($id_number) == 2)
+		$id_number = convertNumber($id_number);
+	if (validateNumber($id_number) == 0)
 		exit("<span id='error'>Invalid ID Number</span>");
 	$data = mysql_fetch_array(mysql_query("SELECT * FROM members WHERE id_number='$id_number'"));
+
 	if (!$data)
 		exit("<span id='error'>ID Not Found</span>");
 	echo "<div id='good'><b>Name: </b>$data[name]<br/><b>Email: </b>$data[email]<br/><b>UH ID: </b>$data[id_number]<br/><b>Points: </b>$data[points]<br/></div>";

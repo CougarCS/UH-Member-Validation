@@ -37,11 +37,13 @@
 		exit("<span id='error'>Invalid Name</span>");
 	if (!validateEmail($email))
 		exit("<span id='error'>Invalid Email</span");
-	if (!validateNumber($id_number))
+	if (validateNumber($id_number) == 2)
+		$id_number = convertNumber($id_number);
+	else if (validateNumber($id_number) == 0)
 		exit("<span id='error'>Invalid ID Number</span>");
-	 if (mysql_fetch_array(mysql_query("SELECT * FROM members WHERE email='$email'")))
+	if (mysql_fetch_array(mysql_query("SELECT * FROM members WHERE email='$email'")))
 		exit("<span id='error'>Email already exists</span>");
-	 if (mysql_fetch_array(mysql_query("SELECT * FROM members WHERE id_number='$id_number'")))
+	if (mysql_fetch_array(mysql_query("SELECT * FROM members WHERE id_number='$id_number'")))
 		exit("<span id='error'>ID Number already exists</span>");
 
 	$query = "INSERT INTO members (name,email,id_number) VALUES ('$name','$email','$id_number')";	

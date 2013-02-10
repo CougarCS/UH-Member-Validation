@@ -6,6 +6,12 @@ This is mainly being developed by CougarCS for CougarCS. The purpose of this scr
 
 Change Log:
 ==========
+V1.3
+
+	Added correct parsing of courgar card to UH PeopleSoft ID number
+
+	Cleaned up code a bit
+
 V1.2
 
 	Added proper Name validation
@@ -16,13 +22,13 @@ V1.1:
 
 V1.0:
 
-	-Errors will no longer show up when first loading the page
+	Errors will no longer show up when first loading the page
 
-	-Consistent styles for errors
+	Consistent styles for errors
 
-	-Validates emails correctly
+	Validates emails correctly
 
-	-Now uses stylesheets properly
+	Now uses stylesheets properly
 
 Below is the command for creating the table for the database:
 =============================================================
